@@ -8,7 +8,7 @@ import Logo from "./img/pastelaria.png";
 //funçoes do styled-components
 
 const Ul = styled.ul
-    `border: solid red;
+    `width: 50vw;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -24,8 +24,8 @@ const Nav = styled.nav
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: black;
-    color: white;
+    background-color: #D78B30;
+    color: black;
     `;
 
 //componente funcional

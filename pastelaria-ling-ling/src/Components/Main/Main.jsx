@@ -1,5 +1,5 @@
 //import tools
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 
 //import styled-components
@@ -25,6 +25,16 @@ import Coca from "./img/coca.png";
 import Drink from "./img/drink.png";
 import Laranja from "./img/laranja.png";
 import Morango from "./img/morango.png"
+import Carrinho from "./img/carrinho.png"
+// import CarrinhoPag from "./img/carrinhopag.png"
+
+//import useState
+const [item, setItem] = useState (0);
+const Adc = ()=>{
+    if(item <= 10){
+        setItem(item + 1)
+    }
+}
 
 // const Main = styled.main
 // `background-color: #E7482E;
@@ -37,7 +47,8 @@ export default function Main(){
         <Section className="Comes">
             <div>
                 <Img src={Pastel4} alt="Cesta com alguns pasteis dentro" />
-                
+                <h4>0 itens</h4>
+                <img onClick={Adc} src={Carrinho} alt="imagem de um carrinho de compras" />
             </div>
             <div>
                 <Img src={Pastel10} alt="Cesta com alguns pasteis dentro" />

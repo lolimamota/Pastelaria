@@ -9,12 +9,17 @@ const Img = styled.img
 
 const Section = styled.section
 `display: flex;
-justify-content: space around;
+justify-content: space-around;
 align-items: center;
+
 `;
 
 const Titulo = styled.h1
 `font-size: 4rem;
+`;
+
+const Meio = styled.main
+`background-color: #E7482E;
 `;
 
 //import images
@@ -28,26 +33,21 @@ import Morango from "./img/morango.png"
 import Carrinho from "./img/carrinho.png"
 // import CarrinhoPag from "./img/carrinhopag.png"
 
-//import useState
-const [item, setItem] = useState (0);
+export default function Main(){
+    const [item, setItem] = useState (0);
 const Adc = ()=>{
-    if(item <= 10){
+    if(item <= 9){
         setItem(item + 1)
     }
 }
 
-// const Main = styled.main
-// `background-color: #E7482E;
-// `;
-
-export default function Main(){
     return(
-        <>
+        <Meio>
         <Titulo>CARDÁPIO</Titulo>
         <Section className="Comes">
             <div>
                 <Img src={Pastel4} alt="Cesta com alguns pasteis dentro" />
-                <h4>0 itens</h4>
+                <h4>{item} itens</h4>
                 <img onClick={Adc} src={Carrinho} alt="imagem de um carrinho de compras" />
             </div>
             <div>
@@ -71,6 +71,6 @@ export default function Main(){
                 <Img src={Morango} alt="Copo com suco de morango" />
             </div>
         </Section>
-        </>
+        </Meio>
     )
 }

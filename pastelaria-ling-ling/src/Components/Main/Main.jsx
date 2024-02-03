@@ -4,13 +4,17 @@ import styled from "styled-components";
 
 //import styled-components
 const Img = styled.img
-`width: 250px;
+`width: 180px;
 `;
 
 const Section = styled.section
 `display: flex;
 justify-content: space around;
 align-items: center;
+`;
+
+const Titulo = styled.h1
+`font-size: 4rem;
 `;
 
 //import images
@@ -28,17 +32,18 @@ import Morango from "./img/morango.png"
 
 export default function Main(){
     return(
-        <section>
-        <h1>Cardápio</h1>
-        <section className="Comes">
+        <>
+        <Titulo>CARDÁPIO</Titulo>
+        <Section className="Comes">
             <div>
                 <Img src={Pastel4} alt="Cesta com alguns pasteis dentro" />
+                
             </div>
             <div>
                 <Img src={Pastel10} alt="Cesta com alguns pasteis dentro" />
             </div>
-        </section>
-        <section className="Bebes">
+        </Section>
+        <Section className="Bebes">
             <div>
                 <Img src={Caldo} alt="Copo com caldo de cana" />
             </div>
@@ -54,7 +59,7 @@ export default function Main(){
             <div>
                 <Img src={Morango} alt="Copo com suco de morango" />
             </div>
-        </section>
-        </section>
+        </Section>
+        </>
     )
 }

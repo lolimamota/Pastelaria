@@ -2,6 +2,17 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
+//import images
+import Pastel4 from "./img/cestinha_4pasteis.png";
+import Pastel10 from "./img/cestinha_10pasteis.png";
+import Caldo from "./img/caldodecana.png";
+import Coca from "./img/coca.png";
+import Drink from "./img/drink.png";
+import Laranja from "./img/laranja.png";
+import Morango from "./img/morango.png"
+import Carrinho from "./img/carrinho.png"
+// import CarrinhoPag from "./img/carrinhopag.png"
+
 //import styled-components
 const Img = styled.img
 `width: 180px;
@@ -22,16 +33,6 @@ const Meio = styled.main
 `background: linear-gradient(to top, #D78B30, transparent);
 `;
 
-//import images
-import Pastel4 from "./img/cestinha_4pasteis.png";
-import Pastel10 from "./img/cestinha_10pasteis.png";
-import Caldo from "./img/caldodecana.png";
-import Coca from "./img/coca.png";
-import Drink from "./img/drink.png";
-import Laranja from "./img/laranja.png";
-import Morango from "./img/morango.png"
-import Carrinho from "./img/carrinho.png"
-// import CarrinhoPag from "./img/carrinhopag.png"
 
 export default function Main(){
     const [item, setItem] = useState (0);

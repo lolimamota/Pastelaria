@@ -32,9 +32,12 @@ align-items: center;
 `;
 
 const Comes = styled.section
-`width: 33.3%;
+`margin-top: 3rem;
+width: 33.3%;
+height: 50vh;
 background-color:white;
 border: solid red;
+border-radius: 30px;
 display: flex;
 flex-direction:column;
 justify-content: space-around;
@@ -55,6 +58,7 @@ const Move = styled.div
 
 const Titulo = styled.h1
 `font-size: 4rem;
+margin-left: 40vw;
 `;
 
 const Meio = styled.main
@@ -65,23 +69,30 @@ background: linear-gradient(to top, #D78B30, transparent);
 
 export default function Main(){
     const [item, setItem] = useState (0);
-const Adc = ()=>{
+    const Adc = ()=>{
     if(item <= 9){
         setItem(item + 1)
     }
 }
 
+    const [menos, setMenos] = useState (0);
+    const Rem = () =>{
+        if(menos >= 0){
+            setMenos(menos - 1)
+        }
+    }
+    
     return(
         <>
         <Titulo>CARDÁPIO</Titulo>
         <Meio>
         <Comes>
-        <h2>Cestas de pasteis</h2>
+        <h2>Cestas de pastéis</h2>
             <Pastelzinho>
                 
                 <Img src={Pastel4} alt="Cesta com alguns pasteis dentro" />
                 <Move>
-                <img src={Menos} alt="sinal de menos" />
+                <img onClick={Rem} src={Menos} alt="sinal de menos" />
                 <h4>{item} itens</h4>
                 <img src={Mais} alt="sinal de mais" />
                 <img src={Lixeirinha} alt="sinal de lixeira" />

@@ -19,7 +19,7 @@ const Titulo = styled.h1
 `;
 
 const Meio = styled.main
-`background-color: #E7482E;
+`background: linear-gradient(to top, #D78B30, transparent);
 `;
 
 //import images
@@ -44,6 +44,7 @@ const Adc = ()=>{
     return(
         <Meio>
         <Titulo>CARDÁPIO</Titulo>
+        <h2>Cestas de pasteis</h2>
         <Section className="Comes">
             <div>
                 <Img src={Pastel4} alt="Cesta com alguns pasteis dentro" />
@@ -54,6 +55,7 @@ const Adc = ()=>{
                 <Img src={Pastel10} alt="Cesta com alguns pasteis dentro" />
             </div>
         </Section>
+        <h2>Bebidas</h2>
         <Section className="Bebes">
             <div>
                 <Img src={Caldo} alt="Copo com caldo de cana" />

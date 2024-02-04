@@ -24,7 +24,7 @@ const Nav = styled.nav
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #D78B30;
+    background: linear-gradient(to bottom, #D78B30, transparent);
     color: black;
     `;
 

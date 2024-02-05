@@ -52,7 +52,7 @@ align-items: center;
 justify-content: center;
 `;
 
-const AdcRem = styled.div
+const Botoes = styled.div
 `display: flex;
 `;
 
@@ -88,16 +88,21 @@ export default function Main(){
         <h2>Cestas de pastéis</h2>
             <Pastelzinho>
                 <Img src={Pastel4} alt="Cesta com alguns pasteis dentro" />
-                <AdcRem>
+                <Botoes>
                 <img onClick={Rem} src={Menos} alt="sinal de menos" />
                 <h4>{item}</h4>
                 <img onClick={Adc}  src={Mais} alt="sinal de mais" />
-                {/* <img src={Lixeirinha} alt="sinal de lixeira" /> */}
-                </AdcRem>
+                </Botoes>
                 <img src={Carrinho} alt="imagem de um carrinho de compras" />
             </Pastelzinho>
             <div>
                 <Img src={Pastel10} alt="Cesta com alguns pasteis dentro" />
+                <Botoes>
+                <img onClick={Rem} src={Menos} alt="sinal de menos" />
+                <h4>{item}</h4>
+                <img onClick={Adc}  src={Mais} alt="sinal de mais" />
+                </Botoes>
+                <img src={Carrinho} alt="imagem de um carrinho de compras" />
             </div>
         </Comes>
         <Section className="Bebes">

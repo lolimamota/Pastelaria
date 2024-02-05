@@ -52,7 +52,7 @@ align-items: center;
 justify-content: center;
 `;
 
-const Move = styled.div
+const AdcRem = styled.div
 `display: flex;
 `;
 
@@ -69,16 +69,14 @@ background: linear-gradient(to top, #D78B30, transparent);
 
 export default function Main(){
     const [item, setItem] = useState (0);
-    const Adc = ()=>{
+    const Adc = () => {
     if(item <= 9){
         setItem(item + 1)
     }
 }
-
-    const [menos, setMenos] = useState (0);
-    const Rem = () =>{
-        if(menos >= 0){
-            setMenos(menos - 1)
+    const Rem = () => {
+        if(item > 0){
+            setItem(item - 1)
         }
     }
     
@@ -89,16 +87,14 @@ export default function Main(){
         <Comes>
         <h2>Cestas de pastéis</h2>
             <Pastelzinho>
-                
                 <Img src={Pastel4} alt="Cesta com alguns pasteis dentro" />
-                <Move>
+                <AdcRem>
                 <img onClick={Rem} src={Menos} alt="sinal de menos" />
-                <h4>{item} itens</h4>
-                <img src={Mais} alt="sinal de mais" />
-                <img src={Lixeirinha} alt="sinal de lixeira" />
-                </Move>
-                
-                <img onClick={Adc} src={Carrinho} alt="imagem de um carrinho de compras" />
+                <h4>{item}</h4>
+                <img onClick={Adc}  src={Mais} alt="sinal de mais" />
+                {/* <img src={Lixeirinha} alt="sinal de lixeira" /> */}
+                </AdcRem>
+                <img src={Carrinho} alt="imagem de um carrinho de compras" />
             </Pastelzinho>
             <div>
                 <Img src={Pastel10} alt="Cesta com alguns pasteis dentro" />

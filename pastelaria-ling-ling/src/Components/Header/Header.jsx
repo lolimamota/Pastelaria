@@ -35,7 +35,7 @@ export default function Header(){
             <Img src={Logo} alt="Logo da pastelaria ling ling com dois pasteis"/>
             <Ul>
                 <li>Inicio</li>
-                <li>Cardapio</li>
+                <li>Cardápio</li>
                 <li>Delivery</li>
                 <li>Carrinho</li>
             </Ul>

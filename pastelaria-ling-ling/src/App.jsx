@@ -1,3 +1,5 @@
+//INTERROMPENDO O ARQUIVO
+
 import { useState } from 'react'
 import './App.css'
 
